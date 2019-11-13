@@ -1,3 +1,6 @@
+# Shawn Picardy
+# CPSC 3600
+
 from optparse import OptionParser
 from socket import *
 import os
@@ -92,7 +95,7 @@ class IRCClient(object):
         self.client_socket.connect((self.serveraddr, int(self.serverport)))
         message = "USER " + self.nick + " " + self.hostname + " " + self.servername + " :" + self.realname + "\r\n"
 
-        print("This is the message: ", message)
+        # print("This is the message: ", message)
 
         self.client_socket.send(message.encode())
         response = self.client_socket.recv(2048).decode()
@@ -161,31 +164,14 @@ class IRCClient(object):
                     start = 1
                     command = parts[0]
 
-                # if len(parts) > start:
-                #     params = []
-
-                # is_trail = False
-                # trail = None
-                # index = 1
-                # for part in parts: 
-                #     if index > start:
-                #         if is_trail:
-                #             trail += " "
-                #         elif part[0] == ":":
-                #             is_trail = True
-                #             trail = part[1:]
-                #         else:
-                #             params.append(part)
-                #     index += 1
-                # params.append(trail)
-
-                print("Prefix = ", prefix)
-                print("command = ", command)
-                print("Params = ", params)
+                # print("Prefix = ", prefix)
+                # print("command = ", command)
+                # print("Params = ", params)
                 if not command in self.response_handlers:
                     self.print_message_to_user(" ".join(params))
                 else:
                     self.response_handlers[command](prefix, params)
+                    
             self.server_read_buffer = ""
         
 

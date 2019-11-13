@@ -520,22 +520,22 @@ if __name__ == "__main__":
     # hidden test cases. Your grade on the project will be equal to your score on the
     # public test cases + your score on the hidden test cases. The highest possible score is 75 points
     basic_connection_tests = {
-        # 'BasicConnectivity_1_TwoServers': 5,
-        # 'BasicConnectivity_2_FourServers': 5,
+        'BasicConnectivity_1_TwoServers': 5,
+        'BasicConnectivity_2_FourServers': 5,
     }
     basic_score = test_manager.run_tests(basic_connection_tests)
 
     IRC_connection_tests = {
-        # # 12 points
-        # 'ServerConnections_1_TwoServers': 3,
-        # 'ServerConnections_2_FourServers': 4,
-        # 'ServerConnections_3_EightServers': 5,
+        # 12 points
+        'ServerConnections_1_TwoServers': 3,
+        'ServerConnections_2_FourServers': 4,
+        'ServerConnections_3_EightServers': 5,
 
-        # # 9 points
-        # 'ClientServerConnections_1_OneServer_OneClient':1,
-        # 'ClientServerConnections_2_OneServer_FourClients':3,
-        # 'ClientServerConnections_3_ThreeServers_SevenClients':4,
-        # 'ClientServerConnections_4_ERROR_NickCollision':1,
+        # 9 points
+        'ClientServerConnections_1_OneServer_OneClient':1,
+        'ClientServerConnections_2_OneServer_FourClients':3,
+        'ClientServerConnections_3_ThreeServers_SevenClients':4,
+        'ClientServerConnections_4_ERROR_NickCollision':1,
 
         # 3 points
         'QUIT_1_OneServer_FourClient':1,
